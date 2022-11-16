@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "photostag"
+version = "0.0.4"
+description = "Image processing with the combined strengths of SciStag, OpenCV, scikit-image and Adobe Photoshop."
+authors = ["Michael Ikemann"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9 <3.11"
+scistag = { version = "^0.0.3", extras = ["logstag", "flask", "opencv"] }
+photoshop-python-api = "^0.19.7"
+psd-tools = "^1.9.23"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^6.5.0"
+pylint = "^2.15.5"
+tuna = "^0.5.11"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
